@@ -86,3 +86,27 @@ a {
     text-align: center;
     padding-top: 5%;
 }
+
+/* propositions section styling */
+.propositions__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    margin-top: 6%;
+}
+.propositions__img > img {
+    width: 80%;
+    height: 50%;
+}
+.propositions__img {
+    width: 50%;
+}
+.propositions__text {
+    width: 50%;
+    text-align:left;
+    padding-bottom: 6%;
+}
+.propositions__text > h2 {
+    padding-bottom: 3%;
+}
