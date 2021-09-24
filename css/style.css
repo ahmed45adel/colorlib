@@ -1,8 +1,16 @@
+@font-face {
+  font-family: boldCabin;
+  src: url("../assets/fonts/Cabin-Bold.woff");
+}
+@font-face {
+  font-family: regularCabin;
+  src: url("../assets/fonts/Cabin-Regular.woff");
+}
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Cabin-Bold.woff';
+    font-family: regularCabin;
 }
 .container {
     width: 90%;
@@ -31,7 +39,7 @@
 }
 .navbar__logo > a {
     font-size: 300%;
-    font-weight: bolder;
+    font-weight: boldCabin;
 }
 
 .navbar__links {
@@ -47,7 +55,7 @@ ul > li {
 a {
     text-decoration: none;
     color: white;
-    font-weight: 300;
+    font-weight: boldCabin;
 }
 #sign {
 background-color: transparent;
@@ -61,27 +69,33 @@ border-width: thin;
 border-radius: 20px 20px 20px 0px;
 }
 #sign > a {
-    font-weight: bolder;
+    font-weight: boldCabin;
 }
-
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:20% ;
+}
 #getStarted {
-background-color: #fb397d;
+background-color: #e96388;
 color: white;
 text-align: center;
 cursor: pointer;
 border-style:none;
-padding:2% 8% 2% 8%;
+padding:2% 5% 2% 5%;
 border-radius: 20px 20px 20px 0px;
+margin-left:2% ;
 }
-#getStarted > a {
-    font-weight: bolder;
-}
+/* #getStarted > a {
+    font-weight: regularCabin;
+} */
 input {
-margin-top: 20%;
 background-color: #9572e8;
 border-style:none;
 padding:2% 8% 2% 8%;
 border-radius: 20px 20px 20px 20px;
+margin-right: 2%;
 }
 input::placeholder {
     color: white;
@@ -122,7 +136,7 @@ h1 + p {
 
 }
 .special {
-    color:#7340e9;
+    color:#4a2fa3;
 }
 
 #special:after {
@@ -142,7 +156,6 @@ h1 + p {
     align-items: baseline;
 }
 .special__article {
-    font-style:italic;
     display: block;
     width: 33.33%;
     text-align: center;
@@ -174,7 +187,7 @@ h1 + p {
     padding-bottom: 3%;
 }
 .propositions {
-    color:#7340e9;
+    color:#4a2fa3;
 }
 
 /* features section styling */
@@ -192,9 +205,7 @@ h1 + p {
     align-content: center;
 }
 .features {
-        color:#7340e9;
-
-
+    color:#4a2fa3;
 }
 .features__article {
     width: 33.33%;
@@ -240,5 +251,6 @@ h1 + p {
 }
 i {
     color: rgb(182, 75, 182);
+font-size: x-large;
 }
 
