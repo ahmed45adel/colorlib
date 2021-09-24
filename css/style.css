@@ -110,3 +110,37 @@ a {
 .propositions__text > h2 {
     padding-bottom: 3%;
 }
+
+/* features section styling */
+
+.features__header {
+    text-align: center;
+    padding: 4%;
+}
+.features__articles {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    align-content: center;
+
+
+}
+.features__article {
+    width: 33.33%;
+    text-align: left;
+    float: left;
+    padding: 1%;
+}
+.features__article > p {
+    padding-top: 2%;
+}
+
+/* video section styling */
+    video {
+    width:80%;
+    height: 60%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 6%;
+}
