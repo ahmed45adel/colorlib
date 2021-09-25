@@ -1,62 +1,73 @@
+/* Font */
 @font-face {
-  font-family: boldCabin;
-  src: url("../assets/fonts/Cabin-Bold.woff");
+font-family: boldCabin;
+src: url("../assets/fonts/Cabin-Bold.woff");
 }
 @font-face {
-  font-family: regularCabin;
-  src: url("../assets/fonts/Cabin-Regular.woff");
+font-family: regularCabin;
+src: url("../assets/fonts/Cabin-Regular.woff");
 }
+
+
+/* general styling */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: regularCabin;
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+font-family: regularCabin;
 }
 .container {
-    width: 90%;
-    margin: 0 auto;
+width: 90%;
+margin: 0 auto;
 }
+ul > li {
+padding: 2%;
+}
+a {
+text-decoration: none;
+color: white;
+font-weight: boldCabin;
+}
+h1 {
+font-size:400%;
+margin-bottom: 5%;
+}
+h1 + p {
+font-size: small;
+}
+
 
 /* welcome section styling */
 .welcome {
-    background-image: url('../assets/images/welcome-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    color: white;
-
+background-image: url('../assets/images/welcome-bg.png');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: bottom;
+color: white;
 }
 
 /* navbar styling */
 .row {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    flex-wrap: wrap;
-    align-items: baseline;
-    margin-bottom: 5%;
-    padding-top: 2%;
+display: flex;
+flex-direction: row;
+justify-content:space-between;
+flex-wrap: wrap;
+align-items: baseline;
+margin-bottom: 5%;
+padding-top: 2%;
 }
 .navbar__logo > a {
-    font-size: 300%;
-    font-weight: boldCabin;
+font-size: 300%;
+font-weight: boldCabin;
 }
-
 .navbar__links {
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    list-style: none;
+display: flex;
+flex-direction: row;
+justify-content:center;
+list-style: none;
 }
 
-ul > li {
-    padding: 2%;
-}
-a {
-    text-decoration: none;
-    color: white;
-    font-weight: boldCabin;
-}
+/* sign up button styling */
 #sign {
 background-color: transparent;
 border:white;
@@ -71,25 +82,15 @@ border-radius: 20px 20px 20px 0px;
 #sign > a {
     font-weight: boldCabin;
 }
+
+
+ /* input form styling */
 form {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top:20% ;
 }
-#getStarted {
-background-color: #e96388;
-color: white;
-text-align: center;
-cursor: pointer;
-border-style:none;
-padding:2% 5% 2% 5%;
-border-radius: 20px 20px 20px 0px;
-margin-left:2% ;
-}
-/* #getStarted > a {
-    font-weight: regularCabin;
-} */
 input {
 background-color: #9572e8;
 border-style:none;
@@ -100,13 +101,20 @@ margin-right: 2%;
 input::placeholder {
     color: white;
 }
-h1 {
-    font-size:400%;
-    margin-bottom: 5%;
+
+
+ /* get started button styling */
+#getStarted {
+background-color: #e96388;
+color: white;
+text-align: center;
+cursor: pointer;
+border-style:none;
+padding:2% 5% 2% 5%;
+border-radius: 20px 20px 20px 0px;
+margin-left:2% ;
 }
-h1 + p {
-    font-size: small;
-}
+
 /* hero section styling */
 .hero__items {
     display: flex;
@@ -114,7 +122,6 @@ h1 + p {
     justify-content:space-between;
     flex-wrap: wrap;
     align-items: center;
-
 }
 
 .hero__img {
@@ -227,11 +234,13 @@ h1 + p {
 
 /* video section styling */
     video {
-    width:80%;
+    width:90%;
     height: 60%;
     margin: 0 auto;
     display: block;
     padding-top: 6%;
+    margin-bottom: -5%;
+    border-radius: 20px 20px 20px 20px;
 }
 
 /* icons */
@@ -254,3 +263,37 @@ i {
 font-size: x-large;
 }
 
+/* statistics section styling */
+.stats {
+background-image: linear-gradient(to right, #a765e1 , #7872ec);
+height: 15rem;
+color: white;
+font-family: 'regularCabin';
+}
+.fa-arrow-down , .fa-smile-beam , #user , .fa-star {
+    color: white;
+}
+.stats__items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content:center;
+}
+.stats__item {
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+}
+.stats__item > h3 {
+padding-top: 20%;
+padding-right: 15%;
+font-size: xx-large;
+}
+i + p {
+    padding-top: 8%;
+    font-size: large;
+}
