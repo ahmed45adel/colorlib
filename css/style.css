@@ -20,13 +20,28 @@ font-family: regularCabin;
 width: 90%;
 margin: 0 auto;
 }
+.header {
+    text-align: center;
+    padding: 4%;
+    font-size: x-large;
+    color:#4a2fa3;
+
+}
+header:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width:3rem;
+    padding-top: 1%;
+    border-bottom: 3px solid violet;
+}
 ul > li {
 padding: 2%;
 }
 a {
 text-decoration: none;
-color: white;
 font-weight: boldCabin;
+color: white;
 }
 h1 {
 font-size:400%;
@@ -137,23 +152,6 @@ margin-left:2% ;
     flex-direction: column;
     align-items: center;
 }
-.special__header {
-    padding-top: 6%;
-        font-size: x-large;
-
-}
-.special {
-    color:#4a2fa3;
-}
-
-#special:after {
-    content: "";
-    display: block;
-    margin: 0 auto;
-    width: 25%;
-    padding-top: 4%;
-    border-bottom: 3px solid violet;
-}
 
 .special__articles {
     display: flex;
@@ -167,8 +165,12 @@ margin-left:2% ;
     width: 33.33%;
     text-align: center;
     padding: 5%;
-
 }
+.special__article > i {
+
+    color: rgb(182, 75, 182);
+}
+
 
 /* propositions section styling */
 .propositions__items {
@@ -199,11 +201,6 @@ margin-left:2% ;
 
 /* features section styling */
 
-.features__header {
-    text-align: center;
-    padding: 4%;
-    font-size: x-large;
-}
 .features__articles {
     display: flex;
     flex-direction: row;
@@ -223,13 +220,9 @@ margin-left:2% ;
 .features__article > p {
     padding-top: 2%;
 }
-#feature:after {
-    content: "";
-    display: block;
-    margin: 0 auto;
-    width: 8%;
-    padding-top: 1%;
-    border-bottom: 3px solid violet;
+.features__article > h3 > i {
+        color: rgb(182, 75, 182);
+
 }
 
 /* video section styling */
@@ -259,7 +252,6 @@ margin-left:2% ;
     float: right;
 }
 i {
-    color: rgb(182, 75, 182);
 font-size: x-large;
 }
 
@@ -270,7 +262,7 @@ height: 15rem;
 color: white;
 font-family: 'regularCabin';
 }
-.fa-arrow-down , .fa-smile-beam , #user , .fa-star {
+.fa-arrow-down , .fa-smile-beam , #user , #star {
     color: white;
 }
 .stats__items {
@@ -296,4 +288,135 @@ font-size: xx-large;
 i + p {
     padding-top: 8%;
     font-size: large;
+}
+
+/* screenshots styling */
+
+.screenshots__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.screenshot {
+    width: 20%;
+}
+.screenshot > img {
+    height: 18rem;
+    width: 10rem;
+    object-fit: cover;
+}
+
+/* add class active here */
+.screenshots__buttons {
+    margin-top: 1rem;
+    text-align: center;
+}
+.screenshots__buttons > a > i {
+font-size: small;
+color: grey;
+}
+/* add active class here for buttons */
+
+/* pricing plan styling */
+
+/* feedback styling */
+.feedback {
+    text-align: center;
+}
+.feedback > .container > i {
+    color:#8d7ef4;
+    padding-bottom: 1rem;
+}
+.feedback > .container > div > i {
+    color: #e9b231;
+}
+.feedback > .container > i + p {
+    color: #8b93aa;
+    padding:1rem;
+}
+
+#jennifer {
+    color:#4a2fa3;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+#developres {
+    color: #9196a7;
+    padding: 1rem;
+}
+.feedback__images {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.feedback__image {
+    width: 33.33%;
+}
+.feedback__image > img {
+    border-radius: 50%;
+    width: 20%;
+    object-fit: cover;
+}
+
+
+/* membership styling */
+.membership {
+    background-image: linear-gradient(to right, #a765e1 , #7872ec);
+    color: white;
+    margin-top: 2rem;
+}
+.membership__items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding:1rem;
+}
+.membership__item {
+    width: 50%;
+}
+.membership__item > button {
+float: right;
+background-color: white;
+text-align: center;
+cursor: pointer;
+border-style:none;
+padding:2% 5% 2% 5%;
+border-radius: 20px 20px 20px 0px;
+}
+.membership__item > button >a {
+    color: #e96388;
+}
+.membership__item > h2 {
+    margin-top: 1rem;
+    font-size: xx-large;
+}
+.membership__item > p {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    font-size: smaller;
+}
+
+/* our team styling */
+.team__items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding:1rem;
+    text-align: center;
+}
+.team__item {
+    width: 25%;
+
+}
+.team__item > img {
+    width: 80%;
+    border-radius: 20px 20px 20px 0px;
 }
