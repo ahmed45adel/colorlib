@@ -269,6 +269,23 @@ video {
     border-radius: 20px 20px 20px 20px;
 }
 
+.video {
+    position: relative;
+    text-align: center;
+}
+
+.fa-play-circle {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #e94070;
+    font-size: 4rem;
+    cursor: pointer;
+    border-radius: 70%;
+    border-color: #e94070;
+}
+
 /* icons */
 
 #pen {
@@ -342,15 +359,30 @@ i+p {
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
+    align-items: center;
 }
+
+/* .screenshots {
+    margin-bottom: 2rem;
+} */
 
 .screenshot {
     width: 20%;
 }
 
-.screenshot>img {
-    height: 18rem;
-    width: 10rem;
+.screenshot>img:not(.active) {
+    /* height: 18rem;
+    width: 10rem; */
+    height: 80%;
+    width: 60%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.active {
+    height: 100%;
+    width: 80%;
+    opacity: 1;
     object-fit: cover;
 }
 
@@ -370,9 +402,81 @@ i+p {
 
 /* pricing plan styling */
 
+.pricing {
+    background-color: rgb(238, 242, 243);
+    border-width: 2%;
+}
+
+.articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pricing__article {
+    text-align: center;
+    margin: 0.01%;
+    width: 25%;
+    background-color: white;
+    border: grey;
+    border-style: solid;
+    /* padding: 1% 4% 1% 4%; */
+    border-width: 0px;
+    border-radius: 20px 20px 20px 0px;
+}
+
+#pricing__text {
+    color: #4a2fa3;
+    font-size: 1.5rem;
+    padding-bottom: 5%;
+}
+
+#pricing__number {
+    color: red;
+}
+
+/* $ */
+
+/* rel parent abs child */
+
+.pricing__plan__header>h3+h3::before {
+    content: "$";
+    display: block;
+    font-size: x-small;
+    padding-right: 13%;
+    margin-bottom: -5%;
+}
+
+.pricing__article p {
+    color: grey;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.pricing__article p::before {
+    content: "";
+    display: block;
+    border-bottom: 3px solid grey;
+    border-width: thin;
+}
+
+/* button */
+
+.pricing__article>button {
+    background-color: #4a2fa3;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-style: none;
+    padding: 2% 5% 2% 5%;
+    border-radius: 0px 0px 20px 0px;
+    width: 100%;
+}
+
 /* feedback styling */
 
 .feedback {
+    margin-top: 4rem;
     text-align: center;
 }
 
@@ -571,4 +675,16 @@ i+p {
     width: 2rem;
     height: 2rem;
     padding-top: 0.5rem;
+}
+
+.contact__header+p {
+    padding-bottom: 2rem;
+}
+
+span {
+    color: #6c56f7;
+}
+
+.contact__paragraph {
+    padding: 0.2rem;
 }
