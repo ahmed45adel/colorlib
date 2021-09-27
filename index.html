@@ -12,36 +12,37 @@
 </head>
 
 <body>
-    <section class="welcome">
-        <!-- Start of navBar -->
-        <nav>
-            <div class="container">
-                <div class="row">
-                    <div class="navbar__logo">
-                        <a href="#">Ca.</a>
-                    </div>
-                    <ul class="navbar__links">
-                        <li> <a href="#"> Home</a> </li>
-                        <li> <a href="#"> About</a></li>
-                        <li> <a href="#"> Features</a></li>
-                        <li> <a href="#"> Screenshot</a></li>
-                        <li> <a href="#"> Pricing</a></li>
-                        <li> <a href="#"> Testimonials</a></li>
-                        <li> <a href="#"> Team</a></li>
-                        <li> <a href="#"> Contact</a></li>
-                    </ul>
-                    <button id="sign"><a href="#">Sign Up Free</a></button>
+    <!-- Start of navBar -->
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="navbar__logo">
+
+                    <a href="#">Ca.</a>
                 </div>
+                <ul class="navbar__links">
+                    <li> <a href="#"> Home</a> </li>
+                    <li> <a href="#special"> About</a></li>
+                    <li> <a href="#features"> Features</a></li>
+                    <li> <a href="#screenshots"> Screenshot</a></li>
+                    <li> <a href="#pricing"> Pricing</a></li>
+                    <li> <a href="#feedback"> Testimonials</a></li>
+                    <li> <a href="#team"> Team</a></li>
+                    <li> <a href="#contact"> Contact</a></li>
+                </ul>
+                <button id="sign"><a href="#">Sign Up Free</a></button>
             </div>
-        </nav>
-        <!-- End of navBar -->
+        </div>
+    </nav>
+    <!-- End of navBar -->
 
-
-        <!-- Start of hero section -->
+    <!-- Start of hero section -->
+    <section class="welcome">
         <section class="hero">
             <div class="container">
                 <div class="hero__items">
-                    <div>
+                    <div class="hero__text">
+                        <span class="c-letter">C</span>
                         <h1>Colorlib app</h1>
                         <p>Everything You Need. To Start Selling Online Beautifully</p>
                         <form>
@@ -59,8 +60,7 @@
     <!-- End of hero section -->
 
     <!-- Start of Special section -->
-
-    <section class="special">
+    <section class="special" id="special">
         <div class="container">
             <div class="special__items">
                 <header class="header">
@@ -108,8 +108,18 @@
                         voluptatum suscipit! Cumque nemo, possimus assumenda molestias accusantium sequi
                         dolores blanditiis necessitatibus aliquam dolore iure, reprehenderit ratione nam!</p>
                     <div class="propositions__icons">
-                        <p id="android"><i class="fab fa-android"></i> available on Google Store</p>
-                        <p id="apple"><i class="fab fa-apple"></i> available on Apple Store</p>
+                        <button id="android">
+                            <i class="fab fa-android"></i>
+                            <h5>available on</h5>
+                            <p>Google Store</p>
+                        </button>
+
+                        <button id="apple">
+                            <i class="fab fa-apple"></i>
+                            <h5>available on</h5>
+                            <p>Apple Store</p>
+
+                        </button>
                     </div>
                 </div>
             </div>
@@ -120,7 +130,7 @@
 
     <!-- Start of features section -->
 
-    <section class="features">
+    <section class="features" id="features">
         <div class="container">
             <header class="header">
                 <h2>
@@ -212,7 +222,7 @@
     <!-- Start of statistics section -->
 
     <!-- Start of screenshots section -->
-    <section class="screenshots">
+    <section class="screenshots" id="screenshots">
         <div class="container">
             <header class="header">
                 <h2>App Screenshots</h2>
@@ -237,7 +247,7 @@
             <div class="screenshots__buttons">
                 <a href="#"><i class="far fa-circle"></i></a>
                 <a href="#"><i class="far fa-circle"></i></a>
-                <a href="#"><i class="far fa-circle"></i></a>
+                <a href="#"><i id="active__screenshot__icon" class="far fa-circle"></i></a>
                 <a href="#"><i class="far fa-circle"></i></a>
                 <a href="#"><i class="far fa-circle"></i></a>
             </div>
@@ -246,10 +256,9 @@
     <!-- End of screenshots section -->
 
 
-    <!-- divide sections into diff pages<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
 
     <!-- Start of pricing section -->
-    <section class="pricing">
+    <section class="pricing" id="pricing">
         <div class="container">
             <header class="header">
                 <h2>Pricing Plan</h2>
@@ -267,6 +276,7 @@
                     <p>10 unique users</p>
                     <button>Select Plan</button>
                 </article>
+
                 <article class="pricing__article">
                     <div class="pricing__plan__header">
                         <h3 id="pricing__text">Starter Plan</h3>
@@ -280,7 +290,7 @@
                     <button>Select Plan</button>
                 </article>
                 <article class="pricing__article">
-                    <div class="pricing__plan__header">
+                    <div class="pricing__plan__header" id="active__plan">
                         <h3 id="pricing__text">Starter Plan</h3>
                         <h3 id="pricing__number">29</h3>
                     </div>
@@ -289,7 +299,7 @@
                     <p>Free host & domain</p>
                     <p>24/7 support</p>
                     <p>10 unique users</p>
-                    <button>Select Plan</button>
+                    <button class="active__plan__button">Select Plan</button>
                 </article>
                 <article class="pricing__article">
                     <div class="pricing__plan__header">
@@ -310,7 +320,7 @@
     <!-- End of pricing section -->
 
     <!-- Start of feedback section -->
-    <section class="feedback">
+    <section class="feedback" id="feedback">
         <div class="container">
             <i class="fas fa-quote-left"></i>
             <p>"I use Colorlib for usability testing. It's great for
@@ -329,15 +339,23 @@
             <p id="jennifer">Jennifer</p>
             <p id="developres">Developer</p>
             <div class="feedback__images">
+                <i class="fas fa-chevron-left"></i>
                 <figure class="feedback__image">
                     <img src="./assets/images/client-3.jpg" alt="client">
                 </figure>
-                <figure class="feedback__image">
+                <figure class="feedback__image" id="active__feedback__image">
                     <img src="./assets/images/client-2.jpg" alt="client">
                 </figure>
                 <figure class="feedback__image">
                     <img src="./assets/images/client-1.jpg" alt="client">
                 </figure>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="screenshots__buttons">
+                <a href="#"><i class="far fa-circle"></i></a>
+                <a href="#"><i id="active__screenshot__icon" class="far fa-circle"></i></a>
+                <a href="#"><i class="far fa-circle"></i></a>
+                <a href="#"><i class="far fa-circle"></i></a>
             </div>
         </div>
     </section>
@@ -362,7 +380,7 @@
     <!-- End of membership section -->
 
     <!-- Start of our team section -->
-    <section class="team">
+    <section class="team" id="team">
         <div class="container">
             <header class="header">
                 <h2>Our Team</h2>
@@ -401,7 +419,7 @@
 
     <!-- End of our team section -->
     <!-- Start of contact section -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="contact__items">
                 <div class="contact__item">

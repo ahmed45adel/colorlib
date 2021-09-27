@@ -12,6 +12,10 @@
 
 /* general styling */
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -63,6 +67,10 @@ h2 {
     font-weight: 200;
 }
 
+nav {
+    background-image: linear-gradient(to right, #6056eb, #834ddf);
+}
+
 /* welcome section styling */
 
 .welcome {
@@ -81,8 +89,8 @@ h2 {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
-    margin-bottom: 5%;
     padding-top: 2%;
+    padding-bottom: 5%;
 }
 
 .navbar__logo>a {
@@ -161,6 +169,22 @@ form {
     align-items: center;
 }
 
+.c-letter {
+    color: white;
+    font-weight: 700;
+    font-size: 15rem;
+    opacity: 0.2;
+    position: absolute;
+    top: -50%;
+    left: -7%;
+    z-index: 1;
+}
+
+.hero__text {
+    margin-top: 3rem;
+    position: relative;
+}
+
 .hero__img {
     height: 70%;
     width: 50%;
@@ -191,8 +215,13 @@ form {
     padding: 5%;
 }
 
+.special__article>h3 {
+    padding-bottom: 5%;
+}
+
 .special__article>i {
     color: rgb(182, 75, 182);
+    padding-bottom: 9%;
 }
 
 /* propositions section styling */
@@ -222,10 +251,31 @@ form {
 
 .propositions__text>h2 {
     padding-bottom: 3%;
+    font-size: 3rem;
 }
 
 .propositions {
     color: #4a2fa3;
+}
+
+.propositions__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#android, #apple {
+    color: black;
+    width: 30%;
+    padding: 1% 2% 1% 2%;
+    margin: 3% 10% 3% 10%;
+    border-radius: 20px 20px 20px 0px;
+    background-color: white;
+    outline: none;
+}
+
+.fa-apple, .fa-android {
+    float: left;
 }
 
 /* features section styling */
@@ -296,14 +346,6 @@ video {
 #ruler {
     display: inline-block;
     transform: rotate(-60deg);
-}
-
-#android {
-    float: left;
-}
-
-#apple {
-    float: right;
 }
 
 i {
@@ -386,6 +428,12 @@ i+p {
     object-fit: cover;
 }
 
+#active__screenshot__icon {
+    background-color: #e94070;
+    color: #e94070;
+    border-radius: 50%;
+}
+
 /* add class active here */
 
 .screenshots__buttons {
@@ -429,15 +477,21 @@ i+p {
     color: #4a2fa3;
     font-size: 1.5rem;
     padding-bottom: 5%;
+    font-weight: 100;
 }
 
 #pricing__number {
     color: red;
+    font-weight: 100;
 }
 
 /* $ */
 
 /* rel parent abs child */
+
+.pricing {
+    margin-top: 2rem;
+}
 
 .pricing__plan__header>h3+h3::before {
     content: "$";
@@ -449,21 +503,39 @@ i+p {
 
 .pricing__article p {
     color: grey;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    /* padding-top: 1rem; */
+    /* padding-bottom: 1rem; */
+    vertical-align: middle;
+    padding: 1rem;
 }
 
-.pricing__article p::before {
-    content: "";
-    display: block;
-    border-bottom: 3px solid grey;
-    border-width: thin;
+.pricing__plan__header {
+    width: 100%;
+    height: 30%;
+    padding-top: 10%;
+}
+
+#active__plan {
+    background-color: #a765e1;
+    padding-top: 10%;
+    border-radius: 0px 0px 20px 0px;
+}
+
+#active__plan>h3 {
+    color: white;
+}
+
+.active__plan__button {
+    background-color: #a765e1;
 }
 
 /* button */
 
+.pricing__article>button:not(.active__plan__button) {
+    background-color: #716a84;
+}
+
 .pricing__article>button {
-    background-color: #4a2fa3;
     color: white;
     text-align: center;
     cursor: pointer;
@@ -471,12 +543,13 @@ i+p {
     padding: 2% 5% 2% 5%;
     border-radius: 0px 0px 20px 0px;
     width: 100%;
+    height: 15%;
 }
 
 /* feedback styling */
 
 .feedback {
-    margin-top: 4rem;
+    margin-top: 7rem;
     text-align: center;
 }
 
@@ -485,7 +558,7 @@ i+p {
     padding-bottom: 1rem;
 }
 
-.feedback>.container>div>i {
+.feedback>.container>div>#feedback__star {
     color: #e9b231;
 }
 
@@ -514,13 +587,23 @@ i+p {
 }
 
 .feedback__image {
-    width: 33.33%;
+    width: 20%;
+    margin: 0 -60px 0 -60px;
 }
 
 .feedback__image>img {
     border-radius: 50%;
     width: 20%;
     object-fit: cover;
+}
+
+#active__feedback__image {
+    width: 35%;
+    margin: 0 -180px 0 -180px;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+    color: rgb(177, 176, 176);
 }
 
 /* membership styling */
@@ -640,7 +723,7 @@ i+p {
 }
 
 #name, #email, textarea {
-    border-color: #8d7ef4;
+    border-color: #eae8f1;
     color: #8d7ef4;
     text-align: left;
     border-style: solid;
