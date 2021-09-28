@@ -39,8 +39,9 @@ html {
     content: "";
     display: block;
     margin: 0 auto;
-    width: 5rem;
+    width: 6vw;
     padding-top: 10px;
+    margin-bottom: 20px;
     border-bottom: 3px solid violet;
 }
 
@@ -55,17 +56,18 @@ a {
 }
 
 h1 {
-    font-size: 400%;
+    font-size: 7vw;
     margin-bottom: 3%;
 }
 
 h1+p {
-    font-size: small;
+    font-size: 0.1vw;
+    width: 28vw;
 }
 
 h2 {
     font-weight: 200;
-    font-size: 3rem;
+    font-size: 3.5vw;
 }
 
 /* welcome section styling */
@@ -76,6 +78,7 @@ h2 {
     background-size: cover;
     background-position: bottom;
     color: white;
+    height: 65vw;
 }
 
 /* navbar styling */
@@ -90,12 +93,20 @@ h2 {
     padding-bottom: 5%;
 }
 
+nav {
+    height: 10vw;
+}
+
+.hero {
+    height: 55vw;
+}
+
 .navbar__logo {
     width: 10%;
 }
 
 .navbar__logo>a {
-    font-size: 4rem;
+    font-size: 5vw;
     font-weight: bolder;
 }
 
@@ -106,6 +117,27 @@ h2 {
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
+}
+
+/* responsive navbar menu */
+
+.hamburger__menu {
+    display: none;
+}
+
+@media only screen and (max-width: 1043px) {
+    ul li {
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 633px) {
+    .navbar__links {
+        display: none;
+    }
+    .hamburger__menu {
+        display: block;
+    }
 }
 
 /* sign up button styling */
@@ -125,6 +157,7 @@ h2 {
 
 #sign>a {
     font-weight: boldCabin;
+    font-size: 1vw;
 }
 
 /* input form styling */
@@ -134,7 +167,7 @@ form {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin-top: 3rem;
+    margin-top: 1vw;
 }
 
 #getStartedInput {
@@ -163,7 +196,6 @@ form {
     border-style: none;
     padding: 2% 5% 2% 5%;
     border-radius: 20px 20px 20px 0px;
-    /* margin-left: 2%; */
 }
 
 /* hero section styling */
@@ -179,16 +211,16 @@ form {
 .c-letter {
     color: white;
     font-weight: 700;
-    font-size: 20rem;
+    font-size: 25vw;
     opacity: 0.1;
     position: absolute;
-    top: -40%;
-    left: -4%;
+    top: -11vw;
+    left: -2vw;
     z-index: 1;
 }
 
 .hero__text {
-    margin-top: 4rem;
+    margin-bottom: 20vw;
     font-size: 1.75rem;
     position: relative;
 }
@@ -200,9 +232,11 @@ form {
 }
 
 .hero__img {
-    height: 70%;
-    width: 50%;
-    margin-bottom: -10%;
+    height: 40vw;
+    width: 40vw;
+    margin-top: 22vw;
+    margin-right: 10vw;
+    /* margin-bottom: -1vw; */
     float: right;
 }
 
@@ -219,6 +253,7 @@ form {
     display: block;
     width: 33.33%;
     text-align: center;
+    padding: 0 3vw 0 3vw;
     /* padding: 5%; */
 }
 
@@ -265,8 +300,8 @@ form {
 }
 
 .propositions__text>h2 {
-    padding-bottom: 3%;
-    font-size: 3rem;
+    /* padding-bottom: 3%;
+    font-size: 3rem; */
     color: #4a2fa3;
 }
 
@@ -364,7 +399,7 @@ video {
     position: absolute;
     top: 48%;
     left: 47%;
-    font-size: 5rem;
+    font-size: 6vw;
     cursor: pointer;
     border-radius: 70%;
 }
@@ -409,9 +444,9 @@ i {
 }
 
 .stats__item {
-    padding-top: 10%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-top: 8vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -421,15 +456,20 @@ i {
 }
 
 .stats__item>h3 {
-    padding-top: 10%;
-    padding-right: 15%;
-    font-size: 4rem;
+    padding-top: 2vw;
+    padding-right: 1vw;
+    font-size: 5vw;
     font-weight: lighter;
 }
 
-i+p {
-    padding-top: 2%;
-    font-size: large;
+.stats__item p:not(#rates) {
+    padding-top: 1vw;
+    width: 80%;
+    font-size: 1.5vw;
+}
+
+#rates {
+    font-size: 1.5vw;
 }
 
 /* screenshots styling */
@@ -442,10 +482,6 @@ i+p {
     text-align: center;
     align-items: center;
 }
-
-/* .screenshots {
-    margin-bottom: 2rem;
-} */
 
 .screenshot {
     width: 20%;
@@ -469,6 +505,7 @@ i+p {
     background-color: #e94070;
     color: #e94070;
     border-radius: 50%;
+    margin: 2rem 0 2rem 0;
 }
 
 .screenshots__buttons {
@@ -809,6 +846,7 @@ i+p {
     margin-bottom: 2%;
     border-width: thin;
     Outline: none;
+    width: 100%;
 }
 
 #sendNow {
