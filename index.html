@@ -12,32 +12,31 @@
 </head>
 
 <body>
-    <!-- Start of navBar -->
-    <nav>
-        <div class="container">
-            <div class="row">
-                <div class="navbar__logo">
-
-                    <a href="#">Ca.</a>
+    <header class="welcome">
+        <!-- Start of navBar -->
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <div class="navbar__logo">
+                        <a href="#">Ca.</a>
+                    </div>
+                    <ul class="navbar__links">
+                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="#special"> About</a></li>
+                        <li> <a href="#features"> Features</a></li>
+                        <li> <a href="#screenshots"> Screenshot</a></li>
+                        <li> <a href="#pricing"> Pricing</a></li>
+                        <li> <a href="#feedback"> Testimonials</a></li>
+                        <li> <a href="#team"> Team</a></li>
+                        <li> <a href="#contact"> Contact</a></li>
+                    </ul>
+                    <button id="sign"><a href="#">Sign Up Free</a></button>
                 </div>
-                <ul class="navbar__links">
-                    <li> <a href="#"> Home</a> </li>
-                    <li> <a href="#special"> About</a></li>
-                    <li> <a href="#features"> Features</a></li>
-                    <li> <a href="#screenshots"> Screenshot</a></li>
-                    <li> <a href="#pricing"> Pricing</a></li>
-                    <li> <a href="#feedback"> Testimonials</a></li>
-                    <li> <a href="#team"> Team</a></li>
-                    <li> <a href="#contact"> Contact</a></li>
-                </ul>
-                <button id="sign"><a href="#">Sign Up Free</a></button>
             </div>
-        </div>
-    </nav>
-    <!-- End of navBar -->
+        </nav>
+        <!-- End of navBar -->
 
-    <!-- Start of hero section -->
-    <section class="welcome">
+        <!-- Start of hero section -->
         <section class="hero">
             <div class="container">
                 <div class="hero__items">
@@ -47,7 +46,7 @@
                         <p>Everything You Need. To Start Selling Online Beautifully</p>
                         <form>
                             <input id="getStartedInput" type="email" placeholder="name@company.com">
-                            <button id="getStarted"><a href="#">Get Started</a></button>
+                            <button type="submit" id="getStarted"><a href="#">Get Started</a></button>
                         </form>
                     </div>
                     <figure>
@@ -56,7 +55,7 @@
                 </div>
             </div>
         </section>
-    </section>
+    </header>
     <!-- End of hero section -->
 
     <!-- Start of Special section -->
@@ -106,7 +105,9 @@
                     <h2>Our Best Propositions for You!</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas odit vitae asperiores
                         voluptatum suscipit! Cumque nemo, possimus assumenda molestias accusantium sequi
-                        dolores blanditiis necessitatibus aliquam dolore iure, reprehenderit ratione nam!</p>
+                        dolores blanditiis necessitatibus aliquam dolore iure, reprehenderit ratione nam!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
                     <div class="propositions__icons">
                         <button id="android">
                             <i class="fab fa-android"></i>
@@ -235,7 +236,7 @@
                     <img src="./assets/images/app-2.jpg" alt="app screenshot">
                 </figure>
                 <figure class="screenshot">
-                    <img class="active" src="./assets/images/app-3.jpg" alt="app screenshot">
+                    <img src="./assets/images/app-3.jpg" alt="app screenshot">
                 </figure>
                 <figure class="screenshot">
                     <img src="./assets/images/app-4.jpg" alt="app screenshot">
@@ -290,7 +291,7 @@
                     <button>Select Plan</button>
                 </article>
                 <article class="pricing__article">
-                    <div class="pricing__plan__header" id="active__plan">
+                    <div class="pricing__plan__header">
                         <h3 id="pricing__text">Starter Plan</h3>
                         <h3 id="pricing__number">29</h3>
                     </div>
@@ -324,9 +325,12 @@
         <div class="container">
             <i class="fas fa-quote-left"></i>
             <p>"I use Colorlib for usability testing. It's great for
-                taking images and making clickable image prototypes
-                that do the job
-                and save me the coding time and just the general
+                taking
+                images and making clickable image
+            </p>
+            <p>
+                prototypes
+                that do the job and save me the coding time and just the general
                 hassle of hosting."
             </p>
             <div>
@@ -388,13 +392,30 @@
             <div class="team__items">
                 <figure class="team__item">
                     <img src="./assets/images/team-1.jpg" alt="team member">
+                    <div class="overlay">
+                        <div class="overlay__icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
                     <figcaption>
                         <h3>JAckson Nash</h3>
                         <p>Tax Advice</p>
-                    </figcaption>
                 </figure>
+
+                </figcaption>
                 <figure class="team__item">
                     <img src="./assets/images/team-2.jpg" alt="team member">
+                    <div class="overlay">
+                        <div class="overlay__icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
                     <figcaption>
                         <h3>Alex Manning</h3>
                         <p>CEO-Founder</p>
@@ -402,6 +423,14 @@
                 </figure>
                 <figure class="team__item">
                     <img src="./assets/images/team-3.jpg" alt="team member">
+                    <div class="overlay">
+                        <div class="overlay__icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
                     <figcaption>
                         <h3>Ollie Schneider</h3>
                         <p>Business Planner</p>
@@ -409,6 +438,14 @@
                 </figure>
                 <figure class="team__item">
                     <img src="./assets/images/team-4.jpg" alt="team member">
+                    <div class="overlay">
+                        <div class="overlay__icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
                     <figcaption>
                         <h3>Roger West</h3>
                         <p>Financer</p>
