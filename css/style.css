@@ -927,6 +927,10 @@ span {
     .special__articles, .features__articles, .pricing__article, .feedback {
         font-size: smaller;
     }
+    .special__article, .propositions__text, .propositions__icons {
+        font-size: x-small;
+        font-weight: 100px;
+    }
     .propositions__icons {
         justify-content: center;
     }
@@ -938,10 +942,20 @@ span {
     }
     .overlay {
         left: 8.5vw;
-        width: 67vw;
-        height: 45.5vh;
+        width: 64.5vw;
+        height: 44vw;
+    }
+    .overlay__icons {
+        height: 43.5vw;
+    }
+    .overlay__icons * {
+        padding: 19vw 0.5vw 0 0.5vw;
+        font-size: 10vw;
     }
     .contact__item>p, #name, #email, textarea {
         font-size: xx-small;
+    }
+    i {
+        font-size: 1rem;
     }
 }
