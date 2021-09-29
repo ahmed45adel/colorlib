@@ -119,27 +119,6 @@ nav {
     list-style: none;
 }
 
-/* responsive navbar menu */
-
-.hamburger__menu {
-    display: none;
-}
-
-@media only screen and (max-width: 1043px) {
-    ul li {
-        padding-top: 20px;
-    }
-}
-
-@media only screen and (max-width: 633px) {
-    .navbar__links {
-        display: none;
-    }
-    .hamburger__menu {
-        display: block;
-    }
-}
-
 /* sign up button styling */
 
 #sign {
@@ -767,10 +746,12 @@ i {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 1.85rem;
+    /* left: 1.85rem; */
+    left: 2.2vw;
     right: 0;
-    height: 78%;
-    width: 80%;
+    height: 11.6vw;
+    /* width: 80%; */
+    width: 17.3vw;
     opacity: 0;
     transition: .5s ease;
     background-color: #602ebd;
@@ -782,7 +763,8 @@ i {
 }
 
 .overlay__icons * {
-    padding: 70px 5px 0 5px;
+    padding: 5.5vw 0.5vw 0 0.5vw;
+    font-size: 1.5vw;
 }
 
 /* contact styling */
@@ -885,4 +867,81 @@ span {
 
 .contact__paragraph {
     padding: 0.2rem;
+}
+
+/* responsive navbar menu */
+
+.hamburger__menu {
+    display: none;
+}
+
+@media only screen and (max-width: 1043px) {
+    ul li {
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 633px) {
+    .navbar__links {
+        display: none;
+    }
+    .hamburger__menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 744px) {
+    #getStarted {
+        margin-top: 5px;
+    }
+}
+
+/* mobile */
+
+@media only screen and (max-width: 543px) and (min-width: 320px) {
+    .hero__items {
+        flex-wrap: nowrap;
+    }
+    .hero__text {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .hero__text p {
+        margin-bottom: 0px;
+    }
+    .hero__imgage__fig {
+        width: 100%;
+    }
+    #getStarted, #getStartedInput {
+        font-size: xx-small;
+    }
+    .special__articles, .propositions__items, .features__articles, .team__items, .articles {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .special__article, .propositions__img, .propositions__text, .features__article, .team__item, .pricing__article {
+        width: 100%;
+        text-align: center;
+    }
+    .special__articles, .features__articles, .pricing__article, .feedback {
+        font-size: smaller;
+    }
+    .propositions__icons {
+        justify-content: center;
+    }
+    .screenshot.hide, .fa-circle.hide {
+        display: none;
+    }
+    .screenshot {
+        width: 33.33%;
+    }
+    .overlay {
+        left: 8.5vw;
+        width: 67vw;
+        height: 45.5vh;
+    }
+    .contact__item>p, #name, #email, textarea {
+        font-size: xx-small;
+    }
 }
